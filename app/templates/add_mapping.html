@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div id="content">
+  <h2>Add New Mapping</h2>
+  <hr>
+  <div id="table-form">
+    <form id="add-mapping-form" method="post">
+      <table>
+        <tr>
+          <td><label>Mapping Name</label></td>
+          <td><input type="text" name="mapping-name" class="textbox" required></td>
+        </tr>
+        <tr>
+          <td><label>Make Prefix</label></td>
+          <td><input type="text" name="make-prefix" class="textbox" required></td>
+        </tr>
+        <tr>
+          <td><label>Buy Prefix</label></td>
+          <td><input type="text" name="buy-prefix" class="textbox" required></td>
+        </tr>
+        <tr>
+          <td><label>Consigned Suffix</label></td>
+          <td><input type="text" name="consigned-suffix" class="textbox" value="CS" required></td>
+        </tr>
+        <tr>
+          <td><label>Customer Document Prefix</label></td>
+          <td><input type="text" name="cus-doc-prefix" class="textbox" value="CUS" required></td>
+        </tr>
+        <tr>
+          <td><label>Revision Delimiter</label></td>
+          <td><input type="text" name="rev-delimiter" class="textbox" value="/" required></td>
+        </tr>
+        <tr>
+          <td><label>Special Character Delimiter</label></td>
+          <td><input type="text" name="spec-char-delimiter" class="textbox"></td>
+        </tr>
+        <tr>
+          <td><label>Sample Customer Number</label></td>
+          <td><input type="text" name="sample-customer-number" class="textbox"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="ADD MAPPING">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="GO BACK" onClick="window.location='/customer_mapping'"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  </div>
+{% endblock %}

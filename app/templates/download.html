@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div id="download-content">
+        <h2>BOM Comparison Report</h2>
+        <hr>
+        {% if download_data_list %}
+          <div id="report-table">
+            <table border="1">
+                <tr>
+                    <th>Customer</th>
+                    <th>Memo</th>
+                    <th>Report</th>
+                    <th>Reported Date</th>
+                    <th>Action</th>
+                </tr>
+                {% for data in download_data_list %}
+                    <tr>
+                        <td id="customer">{{ data[1] }}</td>
+                        <td id="memo">{{ data[2] }}</td>
+                        <td id="report">{{ data[3] }}</td>
+                        <td id="date">{{ data[4] }}</td>
+                        <td ida="action"><a href="/download_report/{{ data[3] }}" class="action download">Download</a> | <a href="/delete_report/{{ data[3] }}" class="action delete">Delete</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+          </div>
+        {% endif%}
+    </div>
+{% endblock %}

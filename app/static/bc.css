@@ -1,0 +1,308 @@
+body {
+  padding: 0;
+  margin: 0;
+  color: #65768f;
+}
+
+div#banner {
+  background-color: #3d4756;
+  padding: 10px;
+  box-shadow: 2px 2px 5px 1px #5c6065;
+}
+
+div#banner span {
+  color: white;
+  font-family: "Rubik", Sans-serif;
+  font-size: 16pt;
+  padding: 10px;
+}
+
+div#banner span a {
+  color: white;
+  text-decoration: none;
+}
+
+div#banner span a:visited {
+  color: white;
+}
+
+div#container {
+  color: #57667b;
+  background-color: #f5f2f2;
+  font-family: "Roboto", Sans-serif;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  box-shadow: 1px 1px 5px 1px #5c6065;
+  border-radius: 5px;
+}
+
+div#container header {
+  text-align: center;
+}
+
+div#container header nav {
+  background-color: #65768f;
+  padding: 10px;
+}
+
+div#container header nav a {
+  color: #43655A;
+  background-color: #FFDB8A;
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+  font-size: 10pt;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+div#container header nav a.active {
+  background-color: #F9F871;
+}
+
+div#container header nav a.nav-template {
+  background-color: #FFC7D7;
+}
+
+div#container header nav a.nav-template:hover {
+  background-color: #E2CADE;
+}
+
+div#container header nav a:hover {
+  color: #43655A;
+  background-color: #FFCAB5;
+}
+
+section#main div#page-content {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+section#main div#page-content div#form-content {
+  padding: 10px;
+  height: 550px;
+  overflow-y: auto;
+}
+
+/*
+section#main div#page-content div#form-content::-webkit-scrollbar {
+  display: none;
+}
+*/
+
+section#main div#page-content div#form-content table {
+  border: 1px solid #d5d7d9;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 1px #a7a7a7;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+section#main div#page-content div#form-content th {
+  color: white;
+  background-color: #3d4756;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+section#main div#page-content div#form-content td {
+  width: 150px;
+}
+
+section#main div#page-content div#form-content td select {
+  width: 300px;
+}
+
+section#main div#page-content table th {
+  text-align: left;
+}
+
+section#main div#page-content table td {
+  padding: 5px;
+}
+
+section#main div#page-content table td .textbox {
+  width: 285px;
+}
+
+section#main div#page-content input {
+  border: 1px solid #B0B3B8;
+
+}
+
+section#main div#page-content .upload-field {
+  border: none;
+  padding: 3px 50px 3px 0;
+}
+
+section#main div#page-content .button {
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: #58E4FF;
+  color: #324B50;
+  font-weight: bold;
+}
+
+section#main div#page-content .button:hover {
+  background-color: #FFC496;
+}
+
+section#main div#page-content .button:active {
+  color: white;
+  background-color: #324B50;
+}
+
+section#flash-section {
+  padding: 10px;
+  background-color: #dbdbdb;
+}
+
+section#flash-section .flash-message {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+
+section#flash-section .flash-message-success {
+  color: #009e05;
+}
+
+section#flash-section .flash-message-error {
+  color: red;
+}
+
+div#download-content {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  height: 720px;
+  overflow-y: auto;
+}
+
+div#download-content::-webkit-scrollbar {
+  display: none;
+}
+
+div#download-content table,
+div#mapping-content table {
+  border: 1px solid #a3a3a3;
+  border-collapse: collapse;
+}
+
+div#download-content table tr th,
+div#mapping-content table tr th {
+  background-color: #65768f;
+  color: white;
+}
+
+div#download-content table tr th,
+div#download-content table tr td {
+  padding: 10px 15px 10px 15px;
+  font-size: 10pt;
+}
+
+div#mapping-content {
+  width: auto-fit;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+div#download-content table tr td {
+  width: 380px;
+}
+
+div#mapping-content div#mapping-table {
+  margin-top: 10px;
+  margin-left: 25px;
+  text-align: center;
+  padding: 10px;
+}
+
+div#mapping-content table {
+  width: 1200px;
+}
+
+div#mapping-content table tr th,
+div#mapping-content table tr td {
+  padding: 10px;
+  font-size: 10pt;
+}
+
+.edit-mapping {
+  background-color: #0098FA;
+  color: white;
+  font-size: 9pt;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.edit-mapping:hover {
+  background-color: #0065a8;
+}
+
+.action {
+  color: white;
+  font-size: 9pt;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.add-mapping,
+.download {
+  background-color: #00ca32;
+}
+
+.add-mapping:hover,
+.download:hover {
+  background-color: #43a303;
+}
+
+.delete {
+  background-color: #ff6b6f;
+  padding: 5px 15px 5px 15px;
+}
+
+.delete:hover {
+  background-color: #fb0006;
+}
+
+select {
+  width: 200px;
+  padding: 2px;
+}
+
+footer {
+  background: #3D4756;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  text-align: center;
+  font-family: "Roboto", Sans-serif;
+  color: white;
+  font-size: 10pt;
+}
+
+ul#compare-fields-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul#compare-fields-list li {
+  padding: 3px 0;
+}
+
+ul#compare-fields-list li label {
+  padding: 0 0 0 15px;
+}

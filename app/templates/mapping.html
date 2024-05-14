@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div id="mapping-content">
+  <h2>Customer Mapping</h2>
+  <hr>
+  <a href="/add_mapping" class="action add-mapping">Add Mapping</a>
+  {% if mapping_list %}
+    <div id="mapping-table">
+      <table border="1">
+        <tr>
+          <th>Mapping Name</th>
+          <th>Make</th>
+          <th>Buy</th>
+          <th>Consigned</th>
+          <th>Document</th>
+          <th>Revision</th>
+          <th>Special Character</th>
+          <th>Sample Number</th>
+          <th>Action</th>
+        </tr>
+        {% for mapping in mapping_list %}
+        <tr>
+          <td>{{ mapping[1] }}</td>
+          <td>{{ mapping[2] }}</td>
+          <td>{{ mapping[3] }}</td>
+          <td>{{ mapping[4] }}</td>
+          <td>{{ mapping[5] }}</td>
+          <td>{{ mapping[6] }}</td>
+          <td>{{ mapping[7] }}</td>
+          <td>{{ mapping[8] }}</td>
+          <td><a href="/modify_mapping/{{ mapping[0] }}" class="edit-mapping">Modify</a> | <a href="/delete_mapping/{{ mapping[0] }}" class="action delete delete-mapping">Delete</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  {% endif %}
+  </div>
+{% endblock %}

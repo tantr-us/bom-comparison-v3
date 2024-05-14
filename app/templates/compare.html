@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block content %}
+<div id="page-content">
+<!--
+  <section>
+    <nav id="sub-nav"><span>Comparison Method: <a href="/">Macro Method</a> | <a href="/raw_bom_method">Raw
+          BOM</a></span></nav>
+  </section> -->
+  <h2>Upload Template</h2>
+  <hr>
+  <table>
+    <form method="post" enctype="multipart/form-data">
+      <tr>
+        <td><label>Customer</label></td>
+        <td><input type="text" name="customer-name" class="textbox" value=""></td>
+      </tr>
+      <tr>
+        <td><label>Memo</label></td>
+        <td><input type="text" name="memo" class="textbox" value=""></td>
+      </tr>
+      <tr>
+        <td><label>Template</label></td>
+        <td><span class="fake-border"><input type="file" name="file" class="upload-field" accept=".xlsm" required></span></td>
+      </tr>
+      <tr>
+        <td><label>Customer Mapping</label></td>
+        <td>
+          <select name="customer-mapping">
+            {% if mapping_list %}
+            {% for mapping in mapping_list %}
+            <option value="{{ mapping[0] }}">{{ mapping[1] }}</option>
+            {% endfor %}
+            {% endif %}
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Compare Fields:</td>
+        <td>
+          <ul id="compare-fields-list">
+            <li>
+              <input type="checkbox" id="checkbox-description" name="checkbox-description" value="1" checked>
+              <input type="hidden" id="checkbox-description" name="checkbox-description" value="0" checked>
+              <label for="checkbox-description">Description</label>
+            </li>
+            <li>
+              <input type="checkbox" id="checkbox-uom" name="checkbox-uom" value="1" checked>
+              <input type="hidden" id="checkbox-uom" name="checkbox-uom" value="0" checked>
+              <label for="checkbox-uom">Unit of Measurement</label>
+            </li>
+            <li>
+              <input type="checkbox" id="checkbox-quantity" name="checkbox-quantity" value="1" checked>
+              <input type="hidden" id="checkbox-quantity" name="checkbox-quantity" value="0" checked>
+              <label for="checkbox-quantity">Quantity</label>
+            </li>
+            <li>
+              <input type="checkbox" id="checkbox-revision" name="checkbox-revision" value="1" checked>
+              <input type="hidden" id="checkbox-revision" name="checkbox-revision" value="0" checked>
+              <label for="checkbox-revision">Revision</label>
+            </li>
+            <li>
+              <input type="checkbox" id="checkbox-refdes" name="checkbox-refdes" value="1" checked>
+              <input type="hidden" id="checkbox-refdes" name="checkbox-refdes" value="0" checked>
+              <label for="checkbox-refdes">Reference Designators</label>
+            </li>
+            <li>
+              <input type="checkbox" id="checkbox-mfr" name="checkbox-mfr" value="1" checked>
+              <input type="hidden" id="checkbox-mfr" name="checkbox-mfr" value="0" checked>
+              <label for="checkbox-mfr">Manufacturer</label>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2"><input type="submit" value="Run Compare" class='button'></td>
+      </tr>
+    </form>
+  </table>
+</div>
+<section id="flash-section">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+      <span id="flash-message" class='flash-message'>{{ message }}</span>
+      <script>
+        let params = new URLSearchParams(document.location.search);
+        var compare_status = params.get("compare_status"); // get URL parameters
+        if (compare_status == "success") {
+          var span = document.getElementById("flash-message");
+          span.classList.add("flash-message-success");
+        } else if (compare_status == "error") {
+          var span = document.getElementById("flash-message");
+          span.classList.add("flash-message-error");
+        }
+      </script>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+</section>
+{% endblock %}

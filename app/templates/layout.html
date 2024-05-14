@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <title>BOM DIFF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='bc.css') }}">
+  <script src="{{ url_for('static', filename='jquery-3.7.1.min.js') }}"></script>
+</head>
+<body>
+  <div id="banner">
+    <span><a href="/">BOM DIFF</a></span>
+  </div>
+  <div id="container">
+    <header>
+      <nav>
+        <a href="/" id="nav-compare">Run Comparison</a>
+        <a href="/view_downloads" id="nav-download">Download Report</a>
+        <a href="/customer_mapping" id="nav-mapping">Customer Mapping</a>
+        <a href="/get_template" class="nav-template">Download Template</a>
+      </nav>
+    </header>
+    <section id="main">
+      {% block content %}
+      {% endblock %}
+    </section>
+
+  <script>
+    var element = null;
+    var page = "{{ page }}";
+    if (page == "compare") {
+      element = document.getElementById("nav-compare");
+    }
+    else if (page == "download") {
+      element = document.getElementById("nav-download");
+    }
+    else if (page == "mapping") {
+      element = document.getElementById("nav-mapping");
+    }
+    element.classList.add("active");
+  </script>
+  </div>
+  <footer>
+    <p>&copy; Developed by Document Control Team - SANMINA E26</p>
+  </footer>
+</body>
+</html>

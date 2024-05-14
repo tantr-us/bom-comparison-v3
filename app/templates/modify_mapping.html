@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div id="content">
+  <h2>Modify Mapping</h2>
+  <hr>
+  {% if mapping %}
+    <div id="table-form">
+      <form id="add-mapping-form" method="post">
+        <table>
+          <tr>
+            <td><label>Mapping Name</label></td>
+            <td><input type="text" name="mapping-name" class="textbox" value="{{ mapping[1] }}" required></td>
+          </tr>
+          <tr>
+            <td><label>Make Prefix</label></td>
+            <td><input type="text" name="make-prefix" class="textbox" value="{{ mapping[2] }}" required></td>
+          </tr>
+          <tr>
+            <td><label>Buy Prefix</label></td>
+            <td><input type="text" name="buy-prefix" class="textbox" value="{{ mapping[3] }}" required></td>
+          </tr>
+          <tr>
+            <td><label>Consigned Suffix</label></td>
+            <td><input type="text" name="consigned-suffix" class="textbox" value="{{ mapping[4] }}" required></td>
+          </tr>
+          <tr>
+            <td><label>Customer Document Prefix</label></td>
+            <td><input type="text" name="cus-doc-prefix" class="textbox" value="{{ mapping[5] }}" required></td>
+          </tr>
+          <tr>
+            <td><label>Revision Delimiter</label></td>
+            <td><input type="text" name="rev-delimiter" class="textbox" value="{{ mapping[6] }}" required></td>
+          </tr>
+          <tr>
+            <td><label>Special Character Delimiter</label></td>
+            <td><input type="text" name="spec-char-delimiter" class="textbox" value="{{ mapping[7] }}"></td>
+          </tr>
+          <tr>
+            <td><label>Sample Customer Number</label></td>
+            <td><input type="text" name="sample-customer-number" class="textbox" value="{{ mapping[8] }}"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" value="UPDATE">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="GO BACK" onClick="window.location='/customer_mapping'"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+ {% endif %}
+  </div>
+{% endblock %}
