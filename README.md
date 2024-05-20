@@ -7,13 +7,13 @@ This tool is used to compare the BOM for the changes or differences between Agil
 ---
 ## Terminology ##
 
-..* BOM (Bill of materials): a centralized source of information used to manufacture a product.
-..* Agile: Agile PLM is a product lifecycle management software owned by Oracle.
+- BOM (Bill of materials): a centralized source of information used to manufacture a product.
+- Agile: Agile PLM is a product lifecycle management software owned by Oracle.
 
 ---
 ## Languages ##
 
---* Python
---* Flask Framework
---* HTML/CSS/Javascript
---* SQLite
+- Python
+- Flask Framework
+- HTML/CSS/Javascript
+- SQLite
