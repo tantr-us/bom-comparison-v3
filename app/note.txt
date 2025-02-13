@@ -1,6 +1,4 @@
 # BOMDIFF_TEMPLATE (BLANK).xlsm
-Protect password: S@nmina01!
-
 
 # AVL Compare note
 If MfrName1 == MfrName2 and MfrNumber1 != MfrNumber2:
