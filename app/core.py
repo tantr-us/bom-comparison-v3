@@ -17,16 +17,6 @@ from modules.utils import *
 
 import os, csv, json
 
-
-#bc_template_path = os.path.join(os.getcwd(), '_bc_templates')
-
-#bc_template = os.path.join(bc_template_path, 'bc_template.xlsx')
-#bc_template = os.path.join(bc_template_path, 'bc_template-compare-shorted bom.xlsx')
-#bc_template = os.path.join(bc_template_path, 'bc_template-single_level 2.xlsx')
-#bc_template = os.path.join(bc_template_path, 'bc_template - solta_multi level_1.xlsx')
-#bc_template = os.path.join(bc_template_path, 'bc_template - IKOS 282080 r4 vs r5 full 2.xlsx')
-#bc_template = os.path.join(bc_template_path, 'bc_template - IKOS 281357 r4 vs r7.xlsx')
-
 BASE_DIR = os.path.dirname(__name__)
 
 REPORT_DIR = os.path.join(BASE_DIR, 'bc_reports')
