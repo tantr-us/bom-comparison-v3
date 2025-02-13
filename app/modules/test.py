@@ -13,7 +13,7 @@ def get_header_index_from_xl(bc_template, sheet_name):
     return header_index_dict
 
 if __name__ == '__main__':
-    bc_template = "E:\\Workspace\\python\\2024_bom_comparison\\pythonProject\\app\\Stress_Test\\SIEMENS\\# BOMDIFF_292682 r1.04 vs 1.07.xlsm"
+    bc_template = "path_to_BC_template"
     sheet_name = "RAW_BOM_AGILE"
     agile_header_idx_dict = get_header_index_from_xl(bc_template=bc_template, sheet_name=sheet_name)
     cust_header_idx_dict = get_header_index_from_xl(bc_template=bc_template, sheet_name="RAW_BOM_CUSTOMER")
